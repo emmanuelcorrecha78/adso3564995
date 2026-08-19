@@ -1,308 +1,131 @@
-/* ================================
-   CONFIGURACIÓN GENERAL
-================================ */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Styles */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #0d1117;
-    color: #ffffff;
-    min-height: 100vh;
+    background: linear-gradient(to top, #738678, #2c332e);
+    color: #fff9;
+    font-family: Poppins;
+    min-height: 100dvh;
+&.emmet{
+background: linear-gradient(to top, rgb(56, 168, 86), #1cc44b);
+background-attachment: fixed;
+
+
 }
-
-/* ================================
-   CONTENEDOR PRINCIPAL
-================================ */
-
-main {
-    width: 90%;
-    max-width: 1100px;
-    margin: 50px auto;
-}
-
-/* ================================
-   HEADER / PERFIL
-================================ */
-
-header.mmenu {
-    background: linear-gradient(145deg, #161b22, #0d1117);
-    border: 1px solid #30363d;
-    border-radius: 20px;
-    padding: 40px;
-    text-align: center;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.4);
-
-    position: relative;
-    overflow: hidden;
-}
-
-/* Línea superior verde SENA */
-
-header.mmenu::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: #39a900;
-}
-
-/* Título */
-
-header h1 {
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #39a900;
-    margin-bottom: 8px;
-}
-
-/* Programa */
-
-header h2 {
-    font-size: 20px;
-    font-weight: 400;
-    color: #c9d1d9;
-    margin-bottom: 30px;
-}
-
-/* Foto de perfil */
-
-header img {
-    width: 150px;
-    height: 150px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 5px solid #39a900;
-
-    padding: 4px;
-
-    background: #0d1117;
-
-    box-shadow:
-        0 0 25px rgba(57, 169, 0, 0.35);
-
-    transition: 0.3s ease;
-}
-
-header img:hover {
-    transform: scale(1.05);
-    box-shadow:
-        0 0 35px rgba(57, 169, 0, 0.6);
-}
-
-/* Nombre */
-
-header h3 {
-    margin-top: 20px;
-
-    font-size: 25px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    color: #ffffff;
-}
-
-/* Centro */
-
-header h4 {
-    margin-top: 10px;
-
-    font-size: 15px;
-
-    font-weight: 400;
-
-    color: #8b949e;
-}
-
-/* Regional */
-
-header h5 {
-    margin-top: 8px;
-
-    font-size: 14px;
-
-    color: #39a900;
-
-    letter-spacing: 1px;
-}
-
-/* ================================
-   MENÚ
-================================ */
-
-menu.mmenu {
-    margin-top: 30px;
-
-    display: grid;
-
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(280px, 1fr)
-    );
-
-    gap: 20px;
-}
-
-/* Tarjeta */
-
-menu a {
-    display: flex;
-
-    align-items: center;
-
-    text-decoration: none;
-
-    background: #161b22;
-
-    border: 1px solid #30363d;
-
-    border-radius: 15px;
-
-    padding: 22px;
-
-    color: white;
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-/* Línea lateral */
-
-menu a::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 4px;
-    height: 100%;
-
-    background: #39a900;
-
-    transform: scaleY(0);
-
-    transition: 0.3s ease;
-}
-
-/* Número */
-
-menu a span {
-    font-size: 32px;
-
-    font-weight: 800;
-
-    color: #39a900;
-
-    min-width: 70px;
-
-    text-align: center;
-}
-
-/* Contenido */
-
-menu a aside {
-    border-left: 1px solid #30363d;
-
-    padding-left: 20px;
-}
-
-/* Título del menú */
-
-menu a h4 {
-    color: #ffffff;
-
-    font-size: 19px;
-
-    margin-bottom: 5px;
-}
-
-/* Descripción */
-
-menu a small {
-    color: #8b949e;
-
-    font-size: 13px;
-}
-
-/* Hover */
-
-menu a:hover {
-    transform: translateY(-5px);
-
-    border-color: #39a900;
-
-    box-shadow:
-        0 10px 30px rgba(57, 169, 0, 0.15);
-}
-
-menu a:hover::before {
-    transform: scaleY(1);
-}
-
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 600px) {
 
     main {
-        width: 94%;
-        margin: 25px auto;
-    }
+        background: linear-gradient(to bottom, #0009, #0000);
+        border-radius: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        margin: 1.4rem auto;
+        width: 380px;
 
-    header.mmenu {
-        padding: 30px 20px;
-    }
+        header.mmenu {
+            text-align: center;
 
-    header h1 {
-        font-size: 30px;
-    }
+            h1 {
+                font-size: 3rem;
+                font-weight: 200;
+                border-bottom: 2px solid #fff9;
+                margin: 0;
+            }
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin: 0;
+            }
+            img {
+                margin: 2rem auto;
+                border: 4px solid #fff3;
+                border-radius: 50%;
+                object-fit: cover;
+                height: 280px;
+                width: 280px;
+            }
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 0;
+            }
+            h4 {
+                font-size: 0.94rem;
+                font-weight: 200;
+                margin: 0;
+            }
+            h5 {
+                font-size: 1rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
 
-    header h2 {
-        font-size: 16px;
-    }
+        menu.mmenu {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 2rem auto;
+            gap: 0.6rem;
+            justify-content: center;
+            
+            a:is(:link, :visited) {
+                background-color: #0009;
+                border-radius: 5rem;
+                text-decoration: none;
+                color: #fff9;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 0.6rem;
+                transition: all 0.4s ease-in;
+                width: 280px;
 
-    header img {
-        width: 120px;
-        height: 120px;
-    }
+                &:is(:hover) {
+                    background-color: #738678;
+                    color: #0009;
+                    transform: scale(1.05) translateX(16px);
 
-    header h3 {
-        font-size: 19px;
-    }
+                    span {
+                        background-color: #0009;
+                        color: #fff9;
+                    }
+                }
 
-    menu.mmenu {
-        grid-template-columns: 1fr;
-    }
+                span {
+                    align-items: center;
+                    display: flex;
+                    font-size: 1.8rem;
+                    border-radius: 50%;
+                    background-color: #738678;
+                    color: #0009;
+                    justify-content: center;
+                    height: 60px;
+                    transition: all 0.8s ease-out;
+                    width: 60px;
+                }
 
-    menu a {
-        padding: 18px;
-    }
-
-    menu a span {
-        font-size: 25px;
-        min-width: 55px;
+                aside {
+                    display: flex;
+                    justify-content: center;
+                    margin-left: 0.6rem;
+                    flex-direction: column;
+                    align-items: start;
+                    h4 {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+                    small {
+                        font-size: 0.6rem;
+                        color: #fff4;
+                    }
+                } 
+            }
+        }
     }
 }
