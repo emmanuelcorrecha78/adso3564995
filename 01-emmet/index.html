@@ -3,27 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADSO 3564995</title>
+    <title>01-Emmet</title>
     <link rel="stylesheet" href="../src/css/master.css">
-</head>     
-<body class="emmet">  
-    <menu class="goback"
-        <a href="../index.html"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path>
-            </svg>
+</head>
+<body class="emmet">
+    <nav class="goback">
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16Zm-88,0H104V160a4,4,0,0,1,4-4h40a4,4,0,0,1,4,4Z"></path></svg>
         </a>
-    </menu>
-    <main>
-        <header class="mmenu">
-            <h1>ADSO 3564995</h1>
-            <h2>TGO Análisis y Desarrollo de Software</h2>
-            <img src="../src/image/emmet-icon.png" alt="My Profile">
-            <h3>Emmanuel correcha sepulveda</h3>
-            <h4>Centro de Procesos Industriales y Construcción</h4>
-            <h5>SENA - Regional Caldas</h5>
-        </header>
+    </nav>
+<main>
+    <header class="mmenu">
+        <h1>01-Emmet</h1>
+        <h2>Plugin para codificación más rápida en HTML y CSS.</h2>
+                    <img src="../src/image/emmet-icon.png" alt="My Profile">
+    </header>
+        <section>
+        <h2 class="subtitle">
+            01-Child
+            <span>></span>
+        </h2>
+        <small>Create child elements (nesting). </small>
+        <h3>Example:</h3>
+        <p>ul>li>a↔️</p>
+        <h3>Result:</h3>
         
-            
-    </main>
+        
+<xmp><ul>
+    <li>
+        <a href=""></a>
+    </li>
+</ul></xmp>
+
+    </section>
+    <section>
+        <h2 class="subtitle">
+            02-Sibling
+            <span> + </span>
+        </h2>
+        <small>Create sibling elements. </small>
+        <h3>Example:</h3>
+        <p>header+section+footer↔️</p>
+        <h3>Result:</h3>
+        
+        
+<xmp><header></header>
+<section></section>
+<footer></footer></xmp>
+
+    </section>
+    <section>
+        <h2 class="subtitle">
+            03-Multiplication
+            <span> * </span>
+        </h2>
+        <small>Repeat elements multiple times. </small>
+        <h3>Example:</h3>
+        <p>ul>li*3↔️</p>
+        <h3>Result:</h3>
+        
+        
+<xmp><ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul></xmp>
+
+    </section>
+    <section>
+        <h2 class="subtitle">
+            04-Class
+            <span> . </span>
+        </h2>
+        <small> Create a class atribute </small>
+        <h3>Example:</h3>
+        <p>div.important↔️</p>
+        <p>.danger↔️</p>
+        <h3>Result:</h3>
+        
+        
+<xmp><div class="important"></div>
+<div class="danger"></div>
+</xmp>
+
+    </section>
+    <section>
+        <h2 class="subtitle">
+            05-Classes
+            <span> ... </span>
+        </h2>
+        <small> Create multiples classes atributes </small>
+        <h3>Example:</h3>
+        <p>div.red.green.blue</p>
+        <h3>Result:</h3>
+
+<xmp><div class="red green blue"></div></xmp>
+
+    </section>
+    <section>
+        <h2 class="subtitle">
+            06-Identification or ID
+            <span> # </span>
+        </h2>
+        <small> Create an ID atribute </small>
+        <h3>Example:</h3>
+        <p>menu#cod123</p>
+        <h3>Result:</h3>
+
+<xmp><menu id="cod123"></menu></xmp>
+
+    </section>
+    <section>
+        <h2 class="subtitle">
+            07-Text
+            <span> {} </span>
+        </h2>
+        <small> Insert text content </small>
+        <h3>Example:</h3>
+        <p>p{lorem ipsum dolor} ↔️</p>
+        <p>a{Click here}</p>
+        <h3>Result:</h3>
+
+<xmp><p>lorem ipsum dolor</p>
+<a href="">Click here</a>
+</xmp>
+
+    </section>
+    <section>
+        <h2 class="subtitle">
+            08-Custom Attribute
+            <span> {} </span>
+        </h2>
+        <small>Creates custom attributes. </small>
+        <h3>Example:</h3>
+        <p>input[type=number] ↔️</p>
+
+        <h3>Result:</h3>
+    
+</main>    
 </body>
 </html>
