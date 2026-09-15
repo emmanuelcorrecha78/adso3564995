@@ -48,7 +48,11 @@ body {
             } 
         }
     }
-
+    section {
+        p, ul, ol {
+            color: #fff9;
+        }
+    }
     &.emmet{
         background: linear-gradient(180grad, #7acb16, #192a05);
     color: #baffa9aa;
