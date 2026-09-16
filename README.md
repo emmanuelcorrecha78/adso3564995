@@ -1,6 +1,6 @@
 # adso3564995
 
-![profile picture](src/image/profile.jpg)
+![profile picture](src/image/profile.jpeg)
 
 ## emm0nuel
 
