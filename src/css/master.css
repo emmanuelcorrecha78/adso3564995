@@ -6,8 +6,9 @@ body {
     background: linear-gradient(to top, #738678, #2c332e);
     background-attachment: fixed;
     color: #eddcb9aa;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     min-height: 100dvh;
+    margin: 0;
 
      &.css {
         background: linear-gradient(to top, #663399, #0e0715);
@@ -44,7 +45,7 @@ body {
                     span {
                         background-color: #663399;
                         height: 50px;
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
                         width: 50px;
                         color: #fff9;
                     }
