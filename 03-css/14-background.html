@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>14-background</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            div {
+                border: 2px solid #fff9;
+                margin: 2rem auto;
+                height: 200px;
+                width: 300px;
+                &.bg01 {
+                    background: #663399;
+                }
+                &.bg02 {
+                    background-image: url(/src/image/mario.png);
+                    background-position: center;
+                    background-size: 66px;
+                }
+                &.bg03 {
+                    background-image: url(/src/image/mario.png);
+                    background-repeat: no-repeat;
+                    background-size: 66px;
+                }
+                &.bg04 {
+                    background-image: url(/src/image/mario.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 66px;
+                }
+                &.bg05 {
+                    /* every Propierty*/
+                    background-image: url(/src/image/mario.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    /* Short hand */
+                    background: url(/src/image/mario.png) no-repeat center / contain;
+                }
+                &.bg06 {
+                    background-image: url(/src/image/mario.png);
+                    background-size: 20%;
+                    background-attachment: fixed;
+                }
+            }
+        }
+    </style>
+</head>
+    <body class="css">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff9" viewBox="0 0 256 256"><path d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z"></path>
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mmenu internal">
+            <h1>14-background</h1>
+            <img src="../src/image/logo-css.png" alt="css">
+            <h3>Propierty sets all background styles in one declaration.</h3>
+            <ul>
+                <li>background-color</li>
+                <li>background-image</li>
+                <li>background-repeat</li>
+                <li>background-position</li>
+                <li>background-size</li>
+                <li>background-attachment</li>
+            </ul>
+        </header>
+        <section>
+            <h3 class="subtitle">background-color</h3>
+            <div class="bg01"></div>
+            <h3 class="subtitle">background-image</h3>
+            <div class="bg02"></div>
+            <h3 class="subtitle">background-repeat</h3>
+            <div class="bg03"></div>
+            <h3 class="subtitle">background-position</h3>
+            <div class="bg04"></div>
+            <h3 class="subtitle">background-size</h3>
+            <div class="bg05"></div>
+            <h3 class="subtitle">background-attachment</h3>
+            <div class="bg06"></div>
+        </section>
+    </main>
+  </body>
+</html>   

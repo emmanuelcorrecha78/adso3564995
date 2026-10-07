@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>20-pseudoclasses</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section { 
+            menu.options{
+            padding: 0rem;
+            a:link, a:visited {
+                border: 2px solid #fff9;
+                color: #fff9;
+                text-decoration: none;
+                padding: 0.2rem 0.4rem;
+            }
+            a:hover{background-color: #663399; color: #fff;}
+            a:active{background-color: red; color: #663399;}
+            a:first-child{
+                pointer-events: none; 
+                opacity: 0.5;
+                 cursor: not-allowed}
+
+            }
+            input {
+                border-radius: 0.2rem;
+                padding: 0.4rem 0.8rem;
+                margin-bottom: 0.4rem;
+                &.focus {
+                    outline: none;
+                    border: 2px solid;
+                    color: #fff;
+                    background-color: #663399;
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+            }
+            p.paragraph {
+                &::first-letter {
+                    font-size: 4rem;
+                    font-family: 'times new roman';
+                    color: #71ef71;
+
+                }
+                &::first-line {
+                    border-color: #71ef7166;
+
+                }
+
+            }
+            div.heart {
+                position: relative;
+                height: 100px;
+                &::after, &::before {
+                    background-color: #dc143c;
+                    border-radius: 25px 25px 0 0;
+                    position: absolute;
+                    content: "";
+                     transform: rotate(-45deg);
+                    
+                    top: 0px;
+                    left: 130px;
+                    width: 50px;
+                    height: 80px;
+                }
+                &::after {
+                    background-color: #fff;
+                    left: 150px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    
+
+    </style>
+</head>
+    <body class="css">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff9" viewBox="0 0 256 256"><path d="M184,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h56a8,8,0,0,0,8-8V80A8,8,0,0,0,184,72Zm-8,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h56Zm48-88v96a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z"></path>
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mmenu internal">
+            <h1>20-pseudoclasses</h1>
+            <img src="../src/image/logo-css.png" alt="css">
+            <h3>is used to define a special state af an element.</h3>
+        </header>
+        <section>
+            <h3 class="subtitle">:link|:hover|:active|:visited</h3>
+            <h4>:first-child|:last-child</h4>
+            <menu class="options">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </menu>
+            <h3 class="subtitle">:focus|:blur</h3>
+            <input type="text" placeholder="Enter your First Name">
+            <br>
+            <input type="text" placeholder="Enter your Last Name">
+            <h3 class="subtitle">:first-letter|:first-line</h3>
+            <p class="paragraph">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam est fugit omnis.
+            </p>
+            <h3 class="subtitle">:before|:after</h3>
+            <div class="heart"></div>
+        </section>
+    </main>
+  </body>
+</html>   
