@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-challenge-responsive</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.4s ease;
+    }
+
+    body {
+        min-height: 100vh;
+        font-family: sans-serif;
+        background: #000;
+        color: #fff;
+        position: relative;
+    }
+
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url(/src/image/otraportada) no-repeat center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
+    }
+
+    main {
+        outline: 10px solid #fff;
+        padding: 1rem;
+        width: 1288px;
+        margin: 2rem auto;
+        background: rgba(0, 0, 0, 0.25);
+
+        header {
+
+            figure.logo {
+                background: url(/src/image/definitivelogo.d.jpeg) no-repeat center;
+                background-size: contain;
+                padding: 0;
+                height: 354px;
+                margin: 0 auto;
+                width: 919px;
+            }
+
+            menu {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    a:is(:link, :visited) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 220px;
+                        padding: 10px;
+                        background: #fff;
+                        color: #000;
+                        text-align: center;
+                        text-decoration: none;
+
+                    img {
+                        width: 100%;
+                        height: 180px;
+                        object-fit: cover;
+                        object-position: center;
+            }
+
+                    span {
+                        font-size: 1.2rem;
+                        padding: 12px;
+            }
+
+                    &:hover {
+                        background: darkred;
+                        color: #fff;
+                        transform: translateY(8px);
+                    }
+                }
+            }
+        }
+
+        section {
+            h2 {
+                text-align: center;
+                font-size: 2.8rem;
+
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    display: none;
+                }
+            }
+
+            p {
+                line-height: 1.8rem;
+                text-align: justify;
+            }
+
+            .intro {
+                text-align: center;
+            }
+ 
+
+            .bio {
+                display: grid;
+                grid-template-columns: 220px 1fr;
+                gap: 1.5rem;
+                align-items: start;
+                margin-top: 1.5rem;
+                padding: 1.5rem;
+                background: rgba(255, 255, 255, 0.08);
+                border-left: 6px solid #fff;
+                scroll-margin-top: 1rem;
+ 
+ 
+                &:target {
+                    background: rgba(139, 0, 0, 0.35);
+                    border-left-color: darkred;
+                }
+ 
+                img {
+                    width: 100%;
+                    height: 280px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 12px;
+                }
+ 
+                h2 {
+                    font-size: 2.2rem;
+                    margin-bottom: 1rem;
+                }
+ 
+                p + p {
+                    margin-top: 0.8rem;
+                }
+            }
+        }
+    }
+        
+    @media (max-width: 1288px) {
+        main {
+            width: 800px;
+
+            header {
+                figure.logo {
+                    width: 348px;
+                    height: 370px;
+                }
+
+                menu {
+                    a:is(:link, :visited) {
+                        width: 124px;
+                    }
+                }
+            }
+
+            section {
+                h2 {
+                    &:first-of-type {
+                        display: none;
+                    }
+
+                    &:nth-of-type(2) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+   
+    @media (max-width: 860px) {
+        main {
+            width: 360px;
+
+            header {
+                figure.logo {
+                    width: 162px;
+                    height: 156px;
+                }
+
+                menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    a:is(:link, :visited) {
+                        width: 100%;
+                        max-width: 280px;
+                        padding: 1rem;
+                    }
+                }
+            }
+
+            section .bio {
+            grid-template-columns: 1fr; 
+            padding: 1rem;
+
+            img {
+                width: 100%;
+                height: 240px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+</style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+
+    <menu>
+        <a href="#itsuki">
+            <img src="/src/image/itsuki.webp" alt="Itsuki">
+            <span>Itsuki</span>
+        </a>
+            <a href="#Ryosuke">
+            <img src="/src/image/ryosuke.webp" alt="Ryosuke">
+            <span>Ryosuke</span>
+        </a>
+
+        <a href="#Takumi">
+            <img src="/src/image/takumifujiwara.webp" alt="Takumi">
+            <span>Takumi</span>
+        </a>
+
+        <a href="#Bunta">
+            <img src="/src/image/bunta.png" alt="Bunta">
+            <span>Bunta</span>
+        </a>
+    </menu>
+        </header>
+
+        <section>
+            <p class="intro">
+                Initial D es una serie de anime y manga centrada
+                en las carreras callejeras de montaña. Sigue la
+                historia de Takumi Fujiwara, un joven que descubre
+                su talento al volante de su Toyota AE86.
+                Presiona un personaje para ir a su historia.
+            </p>
+ 
+            <article id="itsuki" class="bio" id="itsuki">
+                <img src="/src/image/itsuki.webp" alt="Itsuki Takeuchi">
+                <div>
+                    <h2>Itsuki Takeuchi</h2>
+                    <p>Es el mejor amigo de Takumi. Es apasionado por los autos y sueña con convertirse en un corredor callejero famoso.</p>
+                    <p>Compra un Toyota AE85 creyendo que era un AE86, lo que provoca algunas situaciones cómicas. Aunque no tiene el talento natural de Takumi, es leal, divertido y nunca deja de intentarlo.</p>
+                </div>
+            </article>
+ 
+            <article id="Ryosuke" class="bio" id="ryosuke">
+                <img src="/src/image/ryosuke.2.jpeg" alt="Ryosuke Takahashi">
+                <div>
+                    <h2>Ryosuke Takahashi</h2>
+                    <p>Es uno de los corredores más inteligentes y experimentados de la serie. Es el líder de los RedSuns y conduce un Mazda RX-7 FC.</p>
+                    <p>No depende solamente de la velocidad: estudia a sus rivales, analiza sus técnicas y diseña estrategias para ganar.</p>
+                    <p>Cuando descubre el talento de Takumi, comienza a interesarse en él y posteriormente lo invita a formar parte de Project D.</p>
+                </div>
+            </article>
+ 
+            <article id="Takumi" class="bio" id="takumi">
+                <img src="/src/image/taku.jpeg" alt="Takumi Fujiwara">
+                <div>
+                    <h2>Takumi Fujiwara</h2>
+                    <p>Es el protagonista de la historia. Al principio es un chico que no tiene demasiado interés en las carreras.</p>
+                    <p>Desde los 13 años conduce el Toyota AE86 de su padre para repartir tofu por las montañas. Sin darse cuenta, desarrolla una habilidad extraordinaria para conducir.</p>
+                    <p>Cuando empieza a competir contra otros corredores, descubre que tiene un talento excepcional para el drifting y las carreras de montaña.</p>
+                </div>
+            </article>
+ 
+            <article id="Bunta" class="bio" id="bunta">
+                <img src="/src/image/bunta.png" alt="Bunta Fujiwara">
+                <div>
+                    <h2>Bunta Fujiwara</h2>
+                    <p>Es el padre de Takumi y uno de los personajes más misteriosos.</p>
+                    <p>Aunque parece un hombre tranquilo, despreocupado y que siempre está fumando, fue un corredor extraordinario.</p>
+                    <p>Él entrenó a Takumi desde pequeño sin explicarle que estaba desarrollando sus habilidades de conducción. Incluso cuando Takumi se convierte en una leyenda, Bunta sigue estando a su lado.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
