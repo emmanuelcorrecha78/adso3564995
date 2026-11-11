@@ -3,60 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>00-Template</title>
+    <title>40-steps</title>
     <link rel="stylesheet" href="../src/css/master.css">
     <style>
-        :root  {
-            --size: 256;
-
+        :root {
+            --size: 256px;
+        }
+        body {
+            overflow-y: hidden;
         }
         section {
             div.bg {
-                background: url(/src/image/bg-steps.png) no-repeat center / cover ;
-                outline: 4px solid;
+                background: url(/src/image/bg-steps.png)
+                            no-repeat center / cover;
+                outline: 4px solid #fff;
                 border-radius: 12px;
                 corner-shape: squircle;
                 position: relative;
-                height: 540px;
+                height: 500px;
 
                 div.instructions {
-                    background-color: grey;
+                    background: #0009;
                     border-radius: 12px;
                     corner-shape: squircle;
                     color: #fff;
                     text-align: center;
-                    outline: 4px dotted #fff;
+                    outline: 4px solid #fff;
                     padding: 0.4rem;
                     position: absolute;
                     top: 26px;
                     left: 26px;
-                    width: 300px; 
-
+                    width: 300px;
                 }
 
                 div.trainer {
-                    background: url(/src/image/steps-all.png) no-repeat;
-                     background-position-x: 0 ;
-                     transform: scale(.8);
-                     position: absolute;
-                     bottom: 0;
-                     left: 50px;
-                     height: var(--size);
-                     width: var(--size);
+                    background: url(/src/image/steps-all.png)
+                                no-repeat;
+                    background-position-x: 0;
+                    transform: scale(.8);
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50px;
+                    height: var(--size);
+                    width: var(--size);
 
-                     animation: 0.6s animTrainer steps(4) infinite;
+                    animation: 0.6s animTrainer steps(4) infinite;
 
-                     &.front { background-position-y: calc(var(--size)*0);}
-                     &.left  { background-position-y: calc(var(--size)*-1);}
-                     &.right { background-position-y: calc(var(--size)*-2);}
-                     &.back  { background-position-y: calc(var(--size)*-3);}
+                    &.front { background-position-y: calc(var(--size)*0); }
+                    &.left  { background-position-y: calc(var(--size)*-1); }
+                    &.right { background-position-y: calc(var(--size)*-2); }
+                    &.back  { background-position-y: calc(var(--size)*-3); }
                 }
             }
         }
+
         @keyframes animTrainer {
-            100% { background-position-x: calc(var(--size)* -4 );
-            }
+            100% { background-position-x: calc(var(--size) * -4); }
         }
+    </style>
     </style>
 </head>
     <body class="css">
@@ -68,46 +72,42 @@
     </nav>
     <main>
         <header class="mmenu internal">
-            <h1>00-Template</h1>
+            <h1>40-steps</h1>
             <img src="../src/image/logo-css.png" alt="css">
-            <h3>description.</h3>
+            <h3>Allows step-by-step animation of a sprite.</h3>
         </header>
         <section>
             <h3 class="subtitle">subtitle</h3>
-        
-            <div class="bg">
+             <div class="bg">
                 <div class="instructions">
-                    please press arrow keys:
-                    &larr; &uarr; &rarr; &darr;
+                    Please press arrow keys: 
+                    <br>
+                    &larr; &uarr; &rarr; &darr; 
                 </div>
-
-            
-                <div class="trainer front"></div> 
+                <div class="trainer front"></div>
             </div>
-        
         </section>
     </main>
-    <script>
-        const trainer = document.querySelector ('.trainer');
-        document.addEventListener('keyup',function(e) {
-            console.log(e.keyCode) ;
+ <script>
+        const trainer = document.querySelector('.trainer');
+        document.addEventListener('keyup', function(e) {
             switch (e.keyCode) {
-                case 37: //left
-                    trainer.classList.remove('front', 'right' , 'back');
+                case 37: // Left
+                    trainer.classList.remove('front', 'right', 'back');
+                    trainer.classList.add('left');
+                    break;
+                case 38: // Front
+                    trainer.classList.remove('left', 'right', 'back');
                     trainer.classList.add('front');
-                    break
-                case 38: // front
-                    trainer.classList.remove('front', 'right' , 'back');
-                    trainer.classList.add('front');
-                    break
-                case 39: //right
-                    trainer.classList.remove('front', 'right' , 'back');
-                    trainer.classList.add('front');
-                    break
-                case 40: //back
-                    trainer.classList.remove('front', 'right' , 'back');
-                    trainer.classList.add('front');
-                    break
+                    break;
+                case 39: // Right
+                    trainer.classList.remove('left', 'front', 'back');
+                    trainer.classList.add('right');
+                    break;
+                case 40: // Back
+                    trainer.classList.remove('left', 'front', 'right');
+                    trainer.classList.add('back');
+                    break;
             }
         });
     </script>
